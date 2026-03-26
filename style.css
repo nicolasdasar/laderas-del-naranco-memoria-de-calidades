@@ -67,19 +67,6 @@ body {
   z-index: 1;
 }
 
-.hero__logo {
-  position: absolute;
-  top: 28px;
-  left: 28px;
-  z-index: 3;
-}
-
-.hero__logo img {
-  height: 70px;
-  width: auto;
-  opacity: 1;
-  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.6));
-}
 
 .hero__content {
   position: relative;
@@ -125,6 +112,7 @@ body {
 
 .hero__title span {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -189,24 +177,38 @@ body {
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 12px clamp(20px, 4vw, 60px);
+  padding: 30px clamp(20px, 4vw, 60px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(10, 10, 15, 0.8);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-glass);
-  transform: translateY(-100%);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.nav-sticky.visible { transform: translateY(0); }
+.nav-sticky.scrolled {
+  padding: 12px clamp(20px, 4vw, 60px);
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-glass);
+}
 
 .nav-logo {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--accent);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-logo img {
+  height: 80px;
+  width: auto;
+  opacity: 1;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.6));
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-sticky.scrolled .nav-logo img {
+  height: 45px;
 }
 
 .nav-links {

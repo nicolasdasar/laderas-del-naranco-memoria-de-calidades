@@ -12,7 +12,9 @@
 
 <!-- STICKY NAV -->
 <nav class="nav-sticky" id="nav">
-  <div class="nav-logo">Laderas del Naranco</div>
+  <a href="https://www.dasargestion.com" target="_blank" rel="noopener noreferrer" class="nav-logo">
+    <img src="img/dasar-logo.png" alt="DASAR Gestión">
+  </a>
   <ul class="nav-links">
     <li><a href="#calidades">Calidades</a></li>
     <li><a href="#cocina">Cocina</a></li>
@@ -28,9 +30,6 @@
     <img src="img/AEREA.jpg" alt="Vista aérea Laderas del Naranco" loading="eager">
   </div>
   <div class="hero__overlay"></div>
-  <div class="hero__logo">
-    <img src="img/dasar-logo.png" alt="DASAR Gestión">
-  </div>
   <div class="hero__content hero__content--centered">
     <div class="hero__badge">✦ Calificación Energética A</div>
     <h1 class="hero__title">Laderas del<br><span>Naranco</span></h1>
@@ -350,7 +349,7 @@ document.addEventListener('keydown', function(e) {
 // Sticky nav on scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  nav.classList.toggle('visible', window.scrollY > window.innerHeight * 0.5);
+  nav.classList.toggle('scrolled', window.scrollY > 50);
 });
 
 // Reveal on scroll
