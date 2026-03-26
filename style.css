@@ -93,11 +93,11 @@ body {
 
 .hero__title {
   font-family: 'Outfit', sans-serif;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(3.5rem, 9vw, 7rem);
   font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 16px;
-  letter-spacing: -1px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+  letter-spacing: -2px;
 }
 
 .hero__title span {
