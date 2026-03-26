@@ -75,10 +75,10 @@ body {
 }
 
 .hero__logo img {
-  height: 40px;
+  height: 70px;
   width: auto;
-  opacity: 0.9;
-  filter: brightness(1.1);
+  opacity: 1;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.6));
 }
 
 .hero__content {
